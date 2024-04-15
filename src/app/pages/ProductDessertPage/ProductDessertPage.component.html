@@ -1,0 +1,39 @@
+<div class="mb-16">
+  <header class="mt-12 md:mt-24 mb-12 md:mb-20 ml-8 md:ml-16 w-fit">
+    <app-button-to pathTo="Dessert" />
+  </header>
+
+  <main
+    class="flex flex-col items-center justify-center md:justify-normal md:items-start mx-4 md:mx-0 md:flex-row"
+  >
+    <app-prodcuts-image [src]="products$?.img" />
+
+    <article class="mx-4 md:ml-48">
+      <header>
+        <h1
+          class="text-2xl mt-12 ml-4 md:ml-0 md:mt-0 md:text-4xl font-medium text-primary"
+        >
+          {{ products$?.name }}
+        </h1>
+      </header>
+
+      <main class="my-8 text-md mx-4 md:mx-0">
+        <p>
+          {{ products$?.description }}
+        </p>
+        <span
+          class="ml-auto flex justify-end mt-2 font-medium text-primary-500 text-2xl"
+        >
+          ${{ products$?.price }}
+        </span>
+      </main>
+
+      <footer class="flex flex-col">
+        <app-quantity-buttons [product]="products$" />
+        <div class="ml-auto justify-end">
+          <app-add-to-cart-button [productsToAdd]="products$" />
+        </div>
+      </footer>
+    </article>
+  </main>
+</div>

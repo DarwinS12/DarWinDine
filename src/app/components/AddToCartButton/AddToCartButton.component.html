@@ -1,0 +1,8 @@
+<button
+  class="w-fit p-2 bg-primary rounded-md hover:bg-primary-500 transition-all disabled:bg-primary/70"
+  (click)="addToTheProducts()"
+  [disabled]="isProductInCart() || this.productsToAdd?.quantity === 0"
+>
+  @if(!islogin$){ Login to } @if(!isProductInCart()){ Add to cart }@else(){ Is
+  already in cart }
+</button>

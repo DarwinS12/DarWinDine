@@ -1,0 +1,59 @@
+<div class="flex flex-col items-center">
+  <header
+    class="grid grid-cols-2 md:grid-cols-4 gap-x-2 md:gap-x-16 items-center justify-center"
+  >
+    <app-type-food-menu-card
+      typeOfFood="Pizza"
+      cardColor="bg-purple-300"
+      toPage="Pizza"
+    />
+
+    <app-type-food-menu-card
+      typeOfFood="Burger"
+      cardColor="bg-teal-300"
+      toPage="Burger"
+    />
+
+    <app-type-food-menu-card
+      typeOfFood="Dessert"
+      cardColor="bg-pink-300"
+      toPage="Dessert"
+    />
+
+    <app-type-food-menu-card
+      typeOfFood="Drink"
+      cardColor="bg-amber-300"
+      toPage="Drink"
+    />
+  </header>
+
+  <main
+    class="flex gap-x-5 md:gap-x-16 justify-center items-start mt-16 mb-20 md:max-w-full"
+  >
+    <swiper-container
+      slides-per-view="4"
+      class="mx-2 md:mx-20"
+      keyboard="true"
+      navigation="true"
+      autoplay="true"
+      space-between="70"
+      pagination="true"
+      [ngClass]="swiper"
+    >
+      @for (pizza of pizzas$; track pizza.id) {
+
+      <swiper-slide>
+        <a [routerLink]="['/Product/Pizza', pizza.id]">
+          <app-food-card
+            [foodName]="pizza.name"
+            [foodPrice]="pizza.price"
+            [imgSrc]="pizza.img"
+          />
+        </a>
+      </swiper-slide>
+      }
+    </swiper-container>
+  </main>
+</div>
+
+<style></style>

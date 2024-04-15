@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(243, 248, 252);
+}
+html {
+  overflow-y: scroll;
+}
+
+.form.ng-valid:not(form).ng-touched {
+  border-right: 4px solid green;
+}
+
+.form.ng-invalid:not(form).ng-touched {
+  border-right: 4px solid red;
+}

@@ -1,0 +1,26 @@
+<header
+  class="mt-12 mr-16 gap-y-4 ml-2 md:mr-4 md:mt-24 md:ml-16 md:flex justify-between gap-x-2 md:gap-x-0 grid grid-cols-2"
+>
+  <app-button-to pathTo="Home" />
+  <app-filter-by-name [categoryOfTheProduct]="category" />
+  <app-sort-by-price [category]="category" [product]="burgers$" />
+</header>
+
+<main
+  class="md:mx-16 mx-2 gap-x-6 my-10 grid grid-cols-2 md:grid-cols-4 md:gap-y-10 md:gap-x-12"
+>
+  @for (burger of burgers$; track burger.id) { @defer (on viewport) {
+
+  <a [routerLink]="['/Product/Burger', burger.id]">
+    <app-food-card
+      [foodName]="burger.name"
+      [foodPrice]="burger.price"
+      [imgSrc]="burger.images[1].lg"
+    />
+  </a>
+  }@placeholder {
+  <app-skeleton-loading />
+  } }@empty {
+  <h2 class="text-xl mt-12 font-medium">Sorry, there are no results.</h2>
+  }
+</main>

@@ -1,0 +1,67 @@
+<div class="p-4 md:p-5">
+  <form [formGroup]="profileForm" class="space-y-4">
+    <div>
+      <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+        >Your email
+      </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        autocomplete="off"
+        formControlName="email"
+        class="form focus:border-r-primary-500 focus:border-r-4 focus:border-gray-300 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-transparent block w-full p-2.5"
+        placeholder="name@company.com"
+        required
+      />
+      @if(this.profileForm.controls.email.errors?.['email']){
+      <span class="text-sm text-red-600"
+        >Email addresses must contain &#64;</span
+      >
+
+      }
+    </div>
+    <div>
+      <label for="password" class="block mb-2 text-sm font-medium text-gray-900"
+        >Your password</label
+      >
+      <input
+        type="password"
+        name="password"
+        formControlName="password"
+        id="password"
+        placeholder="••••••••"
+        class="form bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-transparent focus:border-r-primary-500 focus:border-r-4 focus:border-gray-300 block w-full p-2.5"
+        required
+      />
+      @if(this.profileForm.controls.password.invalid &&
+      (this.profileForm.controls.password.dirty ||
+      this.profileForm.controls.password.touched) ){
+      @if(this.profileForm.controls.password.errors?.['required']){
+      <span class="text-sm text-red-600">Password is required</span>
+      } }
+    </div>
+    <div class="flex justify-between">
+      <div class="flex items-start">
+        <div class="flex items-center h-5">
+          <input
+            id="remember"
+            type="checkbox"
+            formControlName="isCheckedRemember"
+            class="w-4 h-4 border text-primary-500 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-gray-500/20 hover:cursor-pointer"
+          />
+        </div>
+        <label for="remember" class="ms-2 text-sm font-medium text-gray-900"
+          >Remember me</label
+        >
+      </div>
+    </div>
+    <button
+      type="submit"
+      (click)="login()"
+      class="w-full text-white bg-primary-500 hover:bg-primary hover:text-black font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all"
+    >
+      Login to your account
+    </button>
+  </form>
+</div>

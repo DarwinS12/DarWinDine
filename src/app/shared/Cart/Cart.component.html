@@ -1,0 +1,125 @@
+<div class="absolute bottom-10 right-10">
+  <button
+    class="text-black bg-primary-500 hover:bg-primary font-medium rounded-lg text-sm px-5 py-2.5 mb-2 relative"
+    type="button"
+    data-drawer-target="drawer-bottom-example"
+    data-drawer-show="drawer-bottom-example"
+    data-drawer-placement="bottom"
+    aria-controls="drawer-bottom-example"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="w-6 h-6"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+      />
+    </svg>
+    <span
+      class="rounded-full border-2 border-black text-md px-2 py-0 absolute -top-1 -right-1"
+      >{{ products$.length }}</span
+    >
+  </button>
+</div>
+
+<!-- drawer component -->
+<div
+  id="drawer-bottom-example"
+  class="fixed bottom-0 left-0 right-0 z-40 w-full max-h-96 md:max-h-fit p-4 overflow-y-auto transition-transform bg-white transform-none"
+  tabindex="-1"
+  aria-labelledby="drawer-bottom-label"
+>
+  <header class="flex items-center gap-x-6 md:gap-x-0 justify-between">
+    <button
+      type="button"
+      aria-label="Close menu"
+      data-drawer-hide="drawer-bottom-example"
+      aria-controls="drawer-bottom-example"
+      class="bg-transparent hover:bg-primary-500 hover:text-black rounded-lg text-sm w-10 h-10 transition-colors flex items-center justify-center"
+    >
+      <svg
+        class="w-3 h-3"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+        />
+      </svg>
+    </button>
+    <h1 class="text-xl md:text-3xl text-primary-500">Products in your cart</h1>
+    <input
+      [value]="this.address"
+      class="text-xl w-36 md:w-40 text-neutral-400 font-medium focus:ring-0 focus:outline-none focus:bg-neutral-50"
+    />
+  </header>
+  <main class="flex flex-col justify-between mx-auto w-full mt-10">
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-y-16">
+      @for (product of products$; track product?.name) {
+
+      <li class="flex items-center gap-x-2">
+        @if (isDrink(product)&&product?.image) {
+        <img
+          [src]="product?.image"
+          [alt]="product?.name + ' ' + 'image reference'"
+          class="rounded-xl w-36 h-auto"
+        />
+        } @if (isDessertOrPizza(product)&&product?.img) {
+        <img
+          [src]="product?.img"
+          [alt]="product?.name + ' ' + 'image reference'"
+          class="rounded-xl w-36 h-auto"
+        />
+
+        }@if (isBurger(product) &&product?.images && product.images[1].lg) {
+        <img
+          [src]="product.images[1].lg"
+          [alt]="product?.name + ' ' + 'image reference'"
+          class="rounded-xl w-36 h-auto"
+        />
+        }
+
+        <div class="flex flex-col items-center justify-center gap-y-2">
+          <h2 class="text-xl">{{ product?.name }}</h2>
+          <span class="text-lg">{{
+            product ? "$" + product.price * product.quantity : ""
+          }}</span>
+
+          <app-quantity-buttons
+            ButtonStyles="w-[20px] h-[20px]"
+            styles="bg-transparent"
+            spanFont="text-sm"
+            [product]="product"
+          />
+        </div>
+      </li>
+      }
+    </ul>
+  </main>
+  <footer
+    class="flex justify-between mt-4 border-t-2 border-black/10 pt-4 px-4 md:px-0"
+  >
+    <button
+      aria-label="Pay products"
+      class="text-xl bg-primary-500 hover:bg-primary rounded-xl px-3 transition-all"
+    >
+      Pay
+    </button>
+    <div class="flex flex-col items-center">
+      <h3 class="font-light text-black/70">Total</h3>
+      <h1 class="font-medium text-xl">${{ total$.toFixed(2) }}</h1>
+    </div>
+  </footer>
+</div>

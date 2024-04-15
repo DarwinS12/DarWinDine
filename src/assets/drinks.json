@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1,
+    "name": "Nutella and cognac coffee cocktail",
+    "price": 2.5,
+    "description": "Creamy Nutella meets sophisticated cognac and stimulating coffee.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Easy rhubarb cordial",
+    "price": 9.99,
+    "description": "Refreshing rhubarb cordial captures the essence of tartness.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Bottled chocolate orange negroni",
+    "price": 14.75,
+    "description": "Decadent chocolate and orange elevate the classic Negroni.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Pickled bramble martini",
+    "price": 11.25,
+    "description": "Tangy pickles and sweet blackberries create a refreshing martini.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Toasted marshmallow hot-buttered rum",
+    "price": 8.5,
+    "description": "Warm rum with toasted marshmallow and butter for chilly days.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/5.jpg"
+  },
+
+  {
+    "id": 6,
+    "name": "Sangria",
+    "price": 10.0,
+    "description": "Classic Spanish cocktail with red wine, fruit juices, and fresh fruit slices.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Umibozu yuzu cocktail",
+    "price": 13.2,
+    "description": "Refreshing Japanese-inspired cocktail with citrusy yuzu flavor.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Strawberry collins",
+    "price": 9.75,
+    "description": "Fruity and refreshing cocktail with fresh strawberries, lemon juice, and soda water.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Limoncello spritz",
+    "price": 11.5,
+    "description": "Bubbly Italian cocktail with limoncello, prosecco, and soda water.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/9.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Ginger mango mule",
+    "price": 12.85,
+    "description": "Tropical twist on the classic Moscow Mule with fresh mango and spicy ginger.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Platinum Jubilee gin punch",
+    "price": 15.99,
+    "description": "Celebratory gin punch with premium gin, elderflower liqueur, and sparkling water.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/11.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Pink Gibson cocktail",
+    "price": 10.5,
+    "description": "Sophisticated cocktail with gin, dry vermouth, and pickled onions.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/12.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Rhubarb and ginger cocktail",
+    "price": 9.25,
+    "description": "Refreshing cocktail with rhubarb syrup, ginger beer, and vodka.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/13.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Jerry Thomas Manhattan",
+    "price": 14.0,
+    "description": "Classic cocktail with rye whiskey, sweet vermouth, and bitters.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/14.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Hibiscus and kombucha sparkling mocktail",
+    "price": 7.95,
+    "description": "Refreshing mocktail with hibiscus tea, kombucha, and lime.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/15.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Fifth Avenue daiquiri",
+    "price": 10.75,
+    "description": "Sophisticated daiquiri with rum, elderflower liqueur, and lime.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/16.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Sherry spritz",
+    "price": 8.9,
+    "description": "Refreshing spritz with dry sherry, soda water, and citrus.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/17.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Large espresso martini for a crowd",
+    "price": 18.5,
+    "description": "Big-batch espresso martini with rich coffee flavor.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/18.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Pornstar martini",
+    "price": 14.25,
+    "description": "Glamorous cocktail with vodka, passion fruit liqueur, and sparkling wine",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/19.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Whisky sour",
+    "price": 11.99,
+    "description": "Classic cocktail with bourbon whiskey, lemon juice, and simple syrup.",
+    "image": "https://apipics.s3.amazonaws.com/coctails_api/20.jpg"
+  }
+]

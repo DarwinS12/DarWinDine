@@ -1,0 +1,24 @@
+<a [routerLink]="['/' + toPage]">
+  <article
+    class="mt-12 md:mt-40 min-w-44 md:min-w-96 flex flex-col items-center backdrop-blur-sm shadow-lg shadow-black/10 rounded-xl hover:scale-105 hover:cursor-pointer transition-all"
+    [ngClass]="cardColor"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+  >
+    <header class="p-4">
+      <img
+        [src]="'/assets/Img' + typeOfFood + 'Card.webp'"
+        [alt]="typeOfFood + 'image reference'"
+        class="aspect-square"
+        width="100"
+        height="100"
+      />
+    </header>
+
+    <footer
+      class="p-4 w-full bg-white/50 backdrop-blur-sm text-center text-2xl"
+    >
+      <h1 id="articleTitle">{{ articleTitle }}</h1>
+    </footer>
+  </article>
+</a>

@@ -1,0 +1,30 @@
+<label
+    for="ProductName"
+    class="flex items-center justify-center bg-gray-200 rounded-xl mx-auto py-1 w-52 md:w-[950px]"
+  >
+    <input
+      type="text"
+      name="ProductName"
+      [(ngModel)]="productName"
+      (input)="searchProduct()"
+      autocomplete="off"
+      placeholder="Chesee pizza"
+      class="w-full md:w-full h-8 md:h-10 p-2 rounded-lg border-none outline-none bg-transparent active:outline-none focus:ring-transparent"
+    />
+    <button class="px-2 hover:scale-110 transition-all" aria-label="Search">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        class="w-12 h-6"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.2-5.2m0 0A7.5 7.5 0 1 0 5.2 5.2a7.5 7.5 0 0 0 10.6 10.6Z"
+        />
+      </svg>
+    </button>
+  </label>

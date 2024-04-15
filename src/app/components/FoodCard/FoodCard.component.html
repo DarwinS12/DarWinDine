@@ -1,0 +1,22 @@
+<article
+  class="max-w-40 md:max-w-96 hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-out mb-8"
+>
+  <header>
+    <img
+      [src]="imgSrc"
+      [alt]="foodName + ' ' + 'image reference'"
+      class="max-w-32 md:max-w-96 rounded-lg"
+      loading="eager"
+      [ngClass]="imgHeight"
+    />
+  </header>
+  <main >
+    <div class="flex items-center justify-between mt-6 mb-2">
+      <h1 class="text-md md:text-xl font-medium">{{ foodName }}</h1>
+      <app-rating />
+    </div>
+    @if (islogin$) {
+    <strong class="text-primary font-bold">${{ foodPrice }}</strong>
+    }
+  </main>
+</article>
