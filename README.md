@@ -1,4 +1,9 @@
 # DarWinDine
+![595shots_so](https://github.com/DarwinS12/DarWinDine/assets/128423214/8414bfc7-1cd0-4390-9638-838e0e16edc4)
+![148shots_so](https://github.com/DarwinS12/DarWinDine/assets/128423214/623a41db-601c-446d-925e-7bf60bfe1ea8)
+![792shots_so](https://github.com/DarwinS12/DarWinDine/assets/128423214/1c49c2af-79e6-43b2-a1f8-9a8c5788efa2)
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
